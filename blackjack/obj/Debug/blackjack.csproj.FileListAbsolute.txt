@@ -1,0 +1,10 @@
+C:\Users\Nick\source\repos\blackjack-program\blackjack\bin\Debug\blackjack.exe.config
+C:\Users\Nick\source\repos\blackjack-program\blackjack\bin\Debug\blackjack.exe
+C:\Users\Nick\source\repos\blackjack-program\blackjack\bin\Debug\blackjack.pdb
+C:\Users\Nick\source\repos\blackjack-program\blackjack\obj\Debug\blackjack.csproj.AssemblyReference.cache
+C:\Users\Nick\source\repos\blackjack-program\blackjack\obj\Debug\blackjack.BlackJack.resources
+C:\Users\Nick\source\repos\blackjack-program\blackjack\obj\Debug\blackjack.Properties.Resources.resources
+C:\Users\Nick\source\repos\blackjack-program\blackjack\obj\Debug\blackjack.csproj.GenerateResource.cache
+C:\Users\Nick\source\repos\blackjack-program\blackjack\obj\Debug\blackjack.csproj.CoreCompileInputs.cache
+C:\Users\Nick\source\repos\blackjack-program\blackjack\obj\Debug\blackjack.exe
+C:\Users\Nick\source\repos\blackjack-program\blackjack\obj\Debug\blackjack.pdb

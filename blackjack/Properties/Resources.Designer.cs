@@ -483,6 +483,36 @@ namespace blackjack.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap blackjack_classic_background {
+            get {
+                object obj = ResourceManager.GetObject("blackjack-classic-background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap blackjack_classic_background1 {
+            get {
+                object obj = ResourceManager.GetObject("blackjack-classic-background1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap blackjack_classic_background2 {
+            get {
+                object obj = ResourceManager.GetObject("blackjack-classic-background2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap blue_back {
             get {
                 object obj = ResourceManager.GetObject("blue_back", resourceCulture);

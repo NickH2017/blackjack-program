@@ -16,7 +16,7 @@ namespace blackjack
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BlackJack());
+            Application.Run(new StartForm());
         }
     }
 }

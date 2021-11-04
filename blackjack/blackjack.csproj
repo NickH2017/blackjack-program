@@ -47,18 +47,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="aCard.cs" />
-    <Compile Include="aDealerClass.cs" />
+    <Compile Include="aDealer.cs" />
     <Compile Include="aDeckofCards.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="aGame.cs" />
+    <Compile Include="aPlayer.cs" />
+    <Compile Include="aShoe.cs" />
+    <Compile Include="GameForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="GameForm.Designer.cs">
+      <DependentUpon>GameForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="IDrawCard.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="StartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartForm.Designer.cs">
+      <DependentUpon>StartForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GameForm.resx">
+      <DependentUpon>GameForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -70,6 +80,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="StartForm.resx">
+      <DependentUpon>StartForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -274,6 +287,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\yellow_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blackjack-classic-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blackjack-classic-background1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,22 +10,56 @@ namespace blackjack
     {
         private string suit;
         private string brand;
-        //private int value;
+        private int value;
+        private System.Drawing.Image card;
 
         // Default Constructor
         public aCard()
         {
-            this.suit = "";
-            this.brand = "";
+            suit = "";
+            brand = "";
+            card = Properties.Resources.red_back; // Default Image
         }
-        public void setBrand(string brand)
+        public void SetBrand(string brand)
         {
             this.brand = brand;
         }
-        public void setSuit(string suit)
+        public string GetBrand()
+        {
+            return brand;
+        }
+        public void SetSuit(string suit)
         {
             this.suit = suit;
         }
-
+        public void SetValue()
+        {
+            switch (brand)
+            {
+                case "J":
+                case "Q":
+                case "K":
+                    value = 10;
+                    break;
+                case "A":
+                    value = 11;
+                    break;
+                default:
+                    value = int.Parse(brand);
+                    break;
+            }
+        }
+        public int GetValue()
+        {
+            return value;
+        }
+        public void SetImage(string path)
+        {
+            card = System.Drawing.Image.FromFile(path);
+        }
+        public System.Drawing.Image GetImage()
+        {
+            return card;
+        }
     }
 }

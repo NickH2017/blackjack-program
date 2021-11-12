@@ -47,10 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="aCard.cs" />
-    <Compile Include="aDealer.cs" />
     <Compile Include="aDeckofCards.cs" />
     <Compile Include="aGame.cs" />
     <Compile Include="aPlayer.cs" />
+    <Compile Include="aRandomVariable.cs" />
     <Compile Include="aShoe.cs" />
     <Compile Include="GameForm.cs">
       <SubType>Form</SubType>

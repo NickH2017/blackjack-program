@@ -40,29 +40,18 @@ namespace blackjack
             this.panBet = new System.Windows.Forms.Panel();
             this.txtBet = new System.Windows.Forms.TextBox();
             this.lblBet = new System.Windows.Forms.Label();
-            this.picPlayerCard5 = new System.Windows.Forms.PictureBox();
-            this.picPlayerCard4 = new System.Windows.Forms.PictureBox();
-            this.picPlayerCard3 = new System.Windows.Forms.PictureBox();
-            this.picPlayerCard2 = new System.Windows.Forms.PictureBox();
-            this.picPlayerCard1 = new System.Windows.Forms.PictureBox();
-            this.picDealerCard1 = new System.Windows.Forms.PictureBox();
-            this.picDealerCard2 = new System.Windows.Forms.PictureBox();
-            this.picDealerCard3 = new System.Windows.Forms.PictureBox();
-            this.picDealerCard4 = new System.Windows.Forms.PictureBox();
-            this.picDealerCard5 = new System.Windows.Forms.PictureBox();
             this.btnPlay = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtDealerValue = new System.Windows.Forms.TextBox();
+            this.lblDealerPlayer = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtPlayerValue = new System.Windows.Forms.TextBox();
+            this.lblPlayerValue = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.panPot.SuspendLayout();
             this.panBet.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDealerCard1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDealerCard2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDealerCard3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDealerCard4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDealerCard5)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblPayout
@@ -92,6 +81,7 @@ namespace blackjack
             this.btnHit.TabIndex = 4;
             this.btnHit.Text = "Hit";
             this.btnHit.UseVisualStyleBackColor = false;
+            this.btnHit.Click += new System.EventHandler(this.btnHit_Click);
             // 
             // btnStand
             // 
@@ -108,6 +98,7 @@ namespace blackjack
             this.btnStand.TabIndex = 5;
             this.btnStand.Text = "Stand";
             this.btnStand.UseVisualStyleBackColor = false;
+            this.btnStand.Click += new System.EventHandler(this.btnStand_Click);
             // 
             // btnReset
             // 
@@ -196,108 +187,6 @@ namespace blackjack
             this.lblBet.TabIndex = 7;
             this.lblBet.Text = "Bet $";
             // 
-            // picPlayerCard5
-            // 
-            this.picPlayerCard5.BackColor = System.Drawing.Color.Transparent;
-            this.picPlayerCard5.Location = new System.Drawing.Point(275, 217);
-            this.picPlayerCard5.Name = "picPlayerCard5";
-            this.picPlayerCard5.Size = new System.Drawing.Size(83, 126);
-            this.picPlayerCard5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picPlayerCard5.TabIndex = 10;
-            this.picPlayerCard5.TabStop = false;
-            // 
-            // picPlayerCard4
-            // 
-            this.picPlayerCard4.BackColor = System.Drawing.Color.Transparent;
-            this.picPlayerCard4.Location = new System.Drawing.Point(300, 217);
-            this.picPlayerCard4.Name = "picPlayerCard4";
-            this.picPlayerCard4.Size = new System.Drawing.Size(83, 126);
-            this.picPlayerCard4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picPlayerCard4.TabIndex = 11;
-            this.picPlayerCard4.TabStop = false;
-            // 
-            // picPlayerCard3
-            // 
-            this.picPlayerCard3.BackColor = System.Drawing.Color.Transparent;
-            this.picPlayerCard3.Location = new System.Drawing.Point(326, 217);
-            this.picPlayerCard3.Name = "picPlayerCard3";
-            this.picPlayerCard3.Size = new System.Drawing.Size(83, 126);
-            this.picPlayerCard3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picPlayerCard3.TabIndex = 12;
-            this.picPlayerCard3.TabStop = false;
-            // 
-            // picPlayerCard2
-            // 
-            this.picPlayerCard2.BackColor = System.Drawing.Color.Transparent;
-            this.picPlayerCard2.Location = new System.Drawing.Point(351, 217);
-            this.picPlayerCard2.Name = "picPlayerCard2";
-            this.picPlayerCard2.Size = new System.Drawing.Size(83, 126);
-            this.picPlayerCard2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picPlayerCard2.TabIndex = 13;
-            this.picPlayerCard2.TabStop = false;
-            // 
-            // picPlayerCard1
-            // 
-            this.picPlayerCard1.BackColor = System.Drawing.Color.Transparent;
-            this.picPlayerCard1.Image = global::blackjack.Properties.Resources.green_back;
-            this.picPlayerCard1.Location = new System.Drawing.Point(376, 217);
-            this.picPlayerCard1.Name = "picPlayerCard1";
-            this.picPlayerCard1.Size = new System.Drawing.Size(83, 126);
-            this.picPlayerCard1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picPlayerCard1.TabIndex = 14;
-            this.picPlayerCard1.TabStop = false;
-            // 
-            // picDealerCard1
-            // 
-            this.picDealerCard1.BackColor = System.Drawing.Color.Transparent;
-            this.picDealerCard1.Image = global::blackjack.Properties.Resources.gray_back;
-            this.picDealerCard1.Location = new System.Drawing.Point(376, 65);
-            this.picDealerCard1.Name = "picDealerCard1";
-            this.picDealerCard1.Size = new System.Drawing.Size(83, 126);
-            this.picDealerCard1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picDealerCard1.TabIndex = 19;
-            this.picDealerCard1.TabStop = false;
-            // 
-            // picDealerCard2
-            // 
-            this.picDealerCard2.BackColor = System.Drawing.Color.Transparent;
-            this.picDealerCard2.Location = new System.Drawing.Point(351, 65);
-            this.picDealerCard2.Name = "picDealerCard2";
-            this.picDealerCard2.Size = new System.Drawing.Size(83, 126);
-            this.picDealerCard2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picDealerCard2.TabIndex = 18;
-            this.picDealerCard2.TabStop = false;
-            // 
-            // picDealerCard3
-            // 
-            this.picDealerCard3.BackColor = System.Drawing.Color.Transparent;
-            this.picDealerCard3.Location = new System.Drawing.Point(326, 65);
-            this.picDealerCard3.Name = "picDealerCard3";
-            this.picDealerCard3.Size = new System.Drawing.Size(83, 126);
-            this.picDealerCard3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picDealerCard3.TabIndex = 17;
-            this.picDealerCard3.TabStop = false;
-            // 
-            // picDealerCard4
-            // 
-            this.picDealerCard4.BackColor = System.Drawing.Color.Transparent;
-            this.picDealerCard4.Location = new System.Drawing.Point(300, 65);
-            this.picDealerCard4.Name = "picDealerCard4";
-            this.picDealerCard4.Size = new System.Drawing.Size(83, 126);
-            this.picDealerCard4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picDealerCard4.TabIndex = 16;
-            this.picDealerCard4.TabStop = false;
-            // 
-            // picDealerCard5
-            // 
-            this.picDealerCard5.BackColor = System.Drawing.Color.Transparent;
-            this.picDealerCard5.Location = new System.Drawing.Point(275, 65);
-            this.picDealerCard5.Name = "picDealerCard5";
-            this.picDealerCard5.Size = new System.Drawing.Size(83, 126);
-            this.picDealerCard5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picDealerCard5.TabIndex = 15;
-            this.picDealerCard5.TabStop = false;
-            // 
             // btnPlay
             // 
             this.btnPlay.BackColor = System.Drawing.Color.Cornsilk;
@@ -311,6 +200,88 @@ namespace blackjack
             this.btnPlay.TabIndex = 20;
             this.btnPlay.Text = "Play!";
             this.btnPlay.UseVisualStyleBackColor = false;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.txtDealerValue);
+            this.panel1.Controls.Add(this.lblDealerPlayer);
+            this.panel1.Location = new System.Drawing.Point(490, 109);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(165, 41);
+            this.panel1.TabIndex = 22;
+            // 
+            // txtDealerValue
+            // 
+            this.txtDealerValue.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.txtDealerValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDealerValue.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDealerValue.ForeColor = System.Drawing.Color.LightGreen;
+            this.txtDealerValue.Location = new System.Drawing.Point(57, 7);
+            this.txtDealerValue.Name = "txtDealerValue";
+            this.txtDealerValue.Size = new System.Drawing.Size(27, 26);
+            this.txtDealerValue.TabIndex = 9;
+            this.txtDealerValue.Text = "0";
+            this.txtDealerValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblDealerPlayer
+            // 
+            this.lblDealerPlayer.AutoSize = true;
+            this.lblDealerPlayer.BackColor = System.Drawing.Color.Transparent;
+            this.lblDealerPlayer.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDealerPlayer.ForeColor = System.Drawing.Color.LightGreen;
+            this.lblDealerPlayer.Location = new System.Drawing.Point(5, 9);
+            this.lblDealerPlayer.Name = "lblDealerPlayer";
+            this.lblDealerPlayer.Size = new System.Drawing.Size(50, 19);
+            this.lblDealerPlayer.TabIndex = 7;
+            this.lblDealerPlayer.Text = "Value";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.txtPlayerValue);
+            this.panel2.Controls.Add(this.lblPlayerValue);
+            this.panel2.Location = new System.Drawing.Point(490, 254);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(165, 41);
+            this.panel2.TabIndex = 23;
+            // 
+            // txtPlayerValue
+            // 
+            this.txtPlayerValue.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.txtPlayerValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPlayerValue.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPlayerValue.ForeColor = System.Drawing.Color.LightGreen;
+            this.txtPlayerValue.Location = new System.Drawing.Point(57, 7);
+            this.txtPlayerValue.Name = "txtPlayerValue";
+            this.txtPlayerValue.Size = new System.Drawing.Size(27, 26);
+            this.txtPlayerValue.TabIndex = 9;
+            this.txtPlayerValue.Text = "0";
+            this.txtPlayerValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblPlayerValue
+            // 
+            this.lblPlayerValue.AutoSize = true;
+            this.lblPlayerValue.BackColor = System.Drawing.Color.Transparent;
+            this.lblPlayerValue.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerValue.ForeColor = System.Drawing.Color.LightGreen;
+            this.lblPlayerValue.Location = new System.Drawing.Point(5, 9);
+            this.lblPlayerValue.Name = "lblPlayerValue";
+            this.lblPlayerValue.Size = new System.Drawing.Size(50, 19);
+            this.lblPlayerValue.TabIndex = 7;
+            this.lblPlayerValue.Text = "Value";
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(32, 333);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(56, 56);
+            this.listBox1.TabIndex = 21;
             // 
             // BlackJack
             // 
@@ -319,18 +290,11 @@ namespace blackjack
             this.BackColor = System.Drawing.Color.DarkGreen;
             this.BackgroundImage = global::blackjack.Properties.Resources.blackjack_classic_background2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(704, 501);
+            this.ClientSize = new System.Drawing.Size(702, 456);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnPlay);
-            this.Controls.Add(this.picPlayerCard1);
-            this.Controls.Add(this.picDealerCard1);
-            this.Controls.Add(this.picDealerCard2);
-            this.Controls.Add(this.picDealerCard3);
-            this.Controls.Add(this.picDealerCard4);
-            this.Controls.Add(this.picDealerCard5);
-            this.Controls.Add(this.picPlayerCard2);
-            this.Controls.Add(this.picPlayerCard3);
-            this.Controls.Add(this.picPlayerCard4);
-            this.Controls.Add(this.picPlayerCard5);
             this.Controls.Add(this.panBet);
             this.Controls.Add(this.panPot);
             this.Controls.Add(this.btnReset);
@@ -341,24 +305,19 @@ namespace blackjack
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(720, 540);
-            this.MinimumSize = new System.Drawing.Size(720, 540);
+            this.MaximumSize = new System.Drawing.Size(718, 534);
+            this.MinimumSize = new System.Drawing.Size(718, 460);
             this.Name = "BlackJack";
             this.Text = "BlackJack Game";
+            this.Load += new System.EventHandler(this.BlackJack_Load);
             this.panPot.ResumeLayout(false);
             this.panPot.PerformLayout();
             this.panBet.ResumeLayout(false);
             this.panBet.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDealerCard1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDealerCard2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDealerCard3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDealerCard4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDealerCard5)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -376,17 +335,14 @@ namespace blackjack
         private System.Windows.Forms.Panel panBet;
         private System.Windows.Forms.TextBox txtBet;
         private System.Windows.Forms.Label lblBet;
-        private System.Windows.Forms.PictureBox picPlayerCard5;
-        private System.Windows.Forms.PictureBox picPlayerCard4;
-        private System.Windows.Forms.PictureBox picPlayerCard3;
-        private System.Windows.Forms.PictureBox picPlayerCard2;
-        private System.Windows.Forms.PictureBox picPlayerCard1;
-        private System.Windows.Forms.PictureBox picDealerCard1;
-        private System.Windows.Forms.PictureBox picDealerCard2;
-        private System.Windows.Forms.PictureBox picDealerCard3;
-        private System.Windows.Forms.PictureBox picDealerCard4;
-        private System.Windows.Forms.PictureBox picDealerCard5;
         private System.Windows.Forms.Button btnPlay;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtDealerValue;
+        private System.Windows.Forms.Label lblDealerPlayer;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox txtPlayerValue;
+        private System.Windows.Forms.Label lblPlayerValue;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 

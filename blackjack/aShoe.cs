@@ -6,20 +6,40 @@ using System.Threading.Tasks;
 
 namespace blackjack
 {
-    class aShoe : IDrawCard
+    class aShoe : aRandomVariable, IDrawCard
     {
-        private int seed;
         private int numDecks;
+        private int cardCount;
+        private aDeckofCards deck;
+        private List<aDeckofCards> fullDeck;
+        private aRandomVariable randObj;
+
         // Default Constructor
         public aShoe(int seed, int numDecks)
         {
-            this.seed = seed;
-            this.numDecks = numDecks;
+            randObj = new aRandomVariable(seed);
+            //fullDeck = new List<aDeckofCards>(numDecks);
+            //this.numDecks = numDecks;
+            /*
+            for(int i = 0; i < numDecks; i++)
+            {
+                deck = new aDeckofCards();
+                fullDeck.Add(deck);
+            }*/
+            deck = new aDeckofCards();
+            //this.cardCount = 52;
         }
         // Interface IDrawCard Draw card.
         public aCard Draw()
         {
-            throw new NotImplementedException();
+            List<aCard> cards;
+            //deck = new aDeckofCards();
+
+            int number = randObj.getRand();
+
+            cards = deck.getCards();
+
+            return cards.ElementAt(number);
         }
     }
 }

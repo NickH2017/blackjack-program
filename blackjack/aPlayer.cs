@@ -14,18 +14,14 @@ namespace blackjack
     class aPlayer
     {
         private List<aCard> hand; //Can have up to 10 cards in hand
-        private int bank;
-        private bool bust;
-        private bool win;
-        private bool tie;
+        private double bank;
+        private bool aceFlag;
 
         // Player/Dealer Constructor
         public aPlayer()
         {
             hand = new List<aCard>(10);
-            bust = false;
-            win = false;
-            tie = false;
+            aceFlag = false;
         }
         // Get hand from a player
         public List<aCard> getHand()
@@ -38,26 +34,38 @@ namespace blackjack
             this.hand = newHand;
         }
 
-        public void setBank(int pot)
+        public void setBank(double pot)
         {
             this.bank = pot;
         }
-        public int GetBank()
+        public double GetBank()
         {
             return bank;
         }
-        public void won(int bet)
+        //Player bank is set once won
+        public void won(double bet)
         {
-            bank += (3/2) * bet;
-            win = true;
+            bank += (1.5 * bet);
         }
-        public void settleBet(int bet)
+        // Settle the bet for game start
+        public void settleBet(double bet)
         {
             bank -= bet; 
         }
-
+        /// <summary>
+        /// Get/Set Aceflag returns a bool to check if player has an ace
+        /// </summary>
+        public bool AceFlag
+        {
+            get { return aceFlag; }
+            set { aceFlag = true; }
+        }
+        /// <summary>
+        /// Reset player profile including hand.
+        /// </summary>
         public void reset()
         {
+            aceFlag = false;
             hand.Clear();
         }
     }

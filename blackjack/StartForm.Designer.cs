@@ -32,12 +32,12 @@ namespace blackjack
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartForm));
             this.btnStart = new System.Windows.Forms.Button();
             this.panPot = new System.Windows.Forms.Panel();
-            this.lblSeed = new System.Windows.Forms.Label();
-            this.txtSeed = new System.Windows.Forms.TextBox();
-            this.lblDecks = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.lblWelcome = new System.Windows.Forms.Label();
             this.cboDecks = new System.Windows.Forms.ComboBox();
+            this.checkSoft = new System.Windows.Forms.CheckBox();
+            this.lblDecks = new System.Windows.Forms.Label();
+            this.txtSeed = new System.Windows.Forms.TextBox();
+            this.lblSeed = new System.Windows.Forms.Label();
+            this.lblWelcome = new System.Windows.Forms.Label();
             this.panPot.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,7 +61,7 @@ namespace blackjack
             this.panPot.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panPot.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panPot.Controls.Add(this.cboDecks);
-            this.panPot.Controls.Add(this.checkBox1);
+            this.panPot.Controls.Add(this.checkSoft);
             this.panPot.Controls.Add(this.lblDecks);
             this.panPot.Controls.Add(this.txtSeed);
             this.panPot.Controls.Add(this.lblSeed);
@@ -70,66 +70,6 @@ namespace blackjack
             this.panPot.Name = "panPot";
             this.panPot.Size = new System.Drawing.Size(253, 209);
             this.panPot.TabIndex = 9;
-            // 
-            // lblSeed
-            // 
-            this.lblSeed.AutoSize = true;
-            this.lblSeed.BackColor = System.Drawing.Color.Transparent;
-            this.lblSeed.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSeed.ForeColor = System.Drawing.Color.LightGreen;
-            this.lblSeed.Location = new System.Drawing.Point(53, 36);
-            this.lblSeed.Name = "lblSeed";
-            this.lblSeed.Size = new System.Drawing.Size(47, 19);
-            this.lblSeed.TabIndex = 3;
-            this.lblSeed.Text = "Seed:";
-            // 
-            // txtSeed
-            // 
-            this.txtSeed.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSeed.ForeColor = System.Drawing.Color.DarkGreen;
-            this.txtSeed.Location = new System.Drawing.Point(106, 33);
-            this.txtSeed.Name = "txtSeed";
-            this.txtSeed.Size = new System.Drawing.Size(84, 26);
-            this.txtSeed.TabIndex = 4;
-            this.txtSeed.Text = "999";
-            // 
-            // lblDecks
-            // 
-            this.lblDecks.AutoSize = true;
-            this.lblDecks.BackColor = System.Drawing.Color.Transparent;
-            this.lblDecks.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDecks.ForeColor = System.Drawing.Color.LightGreen;
-            this.lblDecks.Location = new System.Drawing.Point(53, 90);
-            this.lblDecks.Name = "lblDecks";
-            this.lblDecks.Size = new System.Drawing.Size(88, 19);
-            this.lblDecks.TabIndex = 5;
-            this.lblDecks.Text = "# of Decks:";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.ForeColor = System.Drawing.Color.LightGreen;
-            this.checkBox1.Location = new System.Drawing.Point(57, 148);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(78, 23);
-            this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "Soft 17";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // lblWelcome
-            // 
-            this.lblWelcome.AutoSize = true;
-            this.lblWelcome.BackColor = System.Drawing.Color.Transparent;
-            this.lblWelcome.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.ForeColor = System.Drawing.Color.LightGreen;
-            this.lblWelcome.Location = new System.Drawing.Point(238, 81);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(247, 28);
-            this.lblWelcome.TabIndex = 10;
-            this.lblWelcome.Text = "Welcome to BlackJack!";
             // 
             // cboDecks
             // 
@@ -151,6 +91,66 @@ namespace blackjack
             this.cboDecks.Name = "cboDecks";
             this.cboDecks.Size = new System.Drawing.Size(43, 27);
             this.cboDecks.TabIndex = 11;
+            // 
+            // checkSoft
+            // 
+            this.checkSoft.AutoSize = true;
+            this.checkSoft.Checked = true;
+            this.checkSoft.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkSoft.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkSoft.ForeColor = System.Drawing.Color.LightGreen;
+            this.checkSoft.Location = new System.Drawing.Point(57, 148);
+            this.checkSoft.Name = "checkSoft";
+            this.checkSoft.Size = new System.Drawing.Size(78, 23);
+            this.checkSoft.TabIndex = 7;
+            this.checkSoft.Text = "Soft 17";
+            this.checkSoft.UseVisualStyleBackColor = true;
+            // 
+            // lblDecks
+            // 
+            this.lblDecks.AutoSize = true;
+            this.lblDecks.BackColor = System.Drawing.Color.Transparent;
+            this.lblDecks.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDecks.ForeColor = System.Drawing.Color.LightGreen;
+            this.lblDecks.Location = new System.Drawing.Point(53, 90);
+            this.lblDecks.Name = "lblDecks";
+            this.lblDecks.Size = new System.Drawing.Size(88, 19);
+            this.lblDecks.TabIndex = 5;
+            this.lblDecks.Text = "# of Decks:";
+            // 
+            // txtSeed
+            // 
+            this.txtSeed.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSeed.ForeColor = System.Drawing.Color.DarkGreen;
+            this.txtSeed.Location = new System.Drawing.Point(106, 33);
+            this.txtSeed.Name = "txtSeed";
+            this.txtSeed.Size = new System.Drawing.Size(84, 26);
+            this.txtSeed.TabIndex = 4;
+            this.txtSeed.Text = "999";
+            // 
+            // lblSeed
+            // 
+            this.lblSeed.AutoSize = true;
+            this.lblSeed.BackColor = System.Drawing.Color.Transparent;
+            this.lblSeed.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSeed.ForeColor = System.Drawing.Color.LightGreen;
+            this.lblSeed.Location = new System.Drawing.Point(53, 36);
+            this.lblSeed.Name = "lblSeed";
+            this.lblSeed.Size = new System.Drawing.Size(47, 19);
+            this.lblSeed.TabIndex = 3;
+            this.lblSeed.Text = "Seed:";
+            // 
+            // lblWelcome
+            // 
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.BackColor = System.Drawing.Color.Transparent;
+            this.lblWelcome.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.ForeColor = System.Drawing.Color.LightGreen;
+            this.lblWelcome.Location = new System.Drawing.Point(238, 81);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(247, 28);
+            this.lblWelcome.TabIndex = 10;
+            this.lblWelcome.Text = "Welcome to BlackJack!";
             // 
             // StartForm
             // 
@@ -180,7 +180,7 @@ namespace blackjack
         private System.Windows.Forms.Panel panPot;
         private System.Windows.Forms.Label lblSeed;
         private System.Windows.Forms.TextBox txtSeed;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkSoft;
         private System.Windows.Forms.Label lblDecks;
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.ComboBox cboDecks;

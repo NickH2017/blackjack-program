@@ -23,7 +23,8 @@ namespace blackjack
             {
                 int seed = int.Parse(txtSeed.Text);
                 int decks = int.Parse(cboDecks.Text);
-                BlackJack newGame = new BlackJack(seed, decks);
+                bool isSoftGame = checkSoft.Checked; 
+                BlackJack newGame = new BlackJack(seed, decks, isSoftGame);
                 newGame.Show();
             }
             catch(Exception err)

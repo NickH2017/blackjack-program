@@ -294,5 +294,8 @@
   <ItemGroup>
     <None Include="Resources\blackjack-classic-background1.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

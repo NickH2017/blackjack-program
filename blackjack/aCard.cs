@@ -11,27 +11,17 @@ namespace blackjack
         private string suit;
         private string brand;
         private int value;
-        private System.Drawing.Image card;
+        private string ImageLocation;
 
-        // Default Constructor
-        public aCard()
-        {
-            suit = "";
-            brand = "";
-            card = Properties.Resources.red_back; // Default Image
-        }
-        public void SetBrand(string brand)
-        {
-            this.brand = brand;
-        }
-        public string GetBrand()
-        {
-            return brand;
-        }
-        public void SetSuit(string suit)
+        /// <summary>
+        /// Default card constructor creates an empty card.
+        /// </summary>
+        public aCard(string brand, string suit)
         {
             this.suit = suit;
+            this.brand = brand;
         }
+        //Function that sets the numerical value for the cards
         public void SetValue()
         {
             switch (brand)
@@ -49,17 +39,25 @@ namespace blackjack
                     break;
             }
         }
+        //Function that sets a SPECIFIC numerical value for the cards (ACE)
+        public void SetValue(int value)
+        {
+            value = 1;
+        }
+        // Function that obtains the numerical value for an aCard
         public int GetValue()
         {
             return value;
         }
+        // Sets the image for the card to add dynamically
         public void SetImage(string path)
         {
-            card = System.Drawing.Image.FromFile(path);
+            ImageLocation = path;
         }
-        public System.Drawing.Image GetImage()
+        // Returns the card image as a System.Drawing.Image object
+        public string GetImageLoc()
         {
-            return card;
+            return ImageLocation;
         }
     }
 }
